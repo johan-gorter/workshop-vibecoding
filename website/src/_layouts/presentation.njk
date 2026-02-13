@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title | default("Presentatie - Workshop Vibe Coding") }}</title>
+  <link rel="stylesheet" href="/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="/reveal.js/dist/theme/night.css" id="theme">
+  <link rel="stylesheet" href="/reveal.js/plugin/highlight/monokai.css">
+  <style>
+    .reveal {
+      background: url('/images/matrix-background.png') center center / cover no-repeat fixed;
+    }
+    .reveal .slides section {
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 0, 0, 0.5);
+    }
+    .reveal .slides section h1,
+    .reveal .slides section h2,
+    .reveal .slides section h3 {
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.95), 0 0 25px rgba(0, 0, 0, 0.8), 0 0 50px rgba(0, 0, 0, 0.6), 0 0 8px rgba(108, 92, 231, 0.4);
+    }
+    .reveal .slides section li,
+    .reveal .slides section p {
+      text-shadow: 0 0 8px rgba(0, 0, 0, 0.95), 0 0 20px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.5);
+    }
+    .reveal code.codeblock {
+      display: block;
+      width: 98%;
+      text-align: left;
+      background: rgba(30, 30, 30, 0.85);
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      margin: 0.5em 0;
+      padding: 1em;
+      border-radius: 6px;
+      font-size: 0.45em;
+      user-select: all;
+      cursor: pointer;
+      text-shadow: none;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      {% for slide in collections.slides %}
+      <section>
+        {{ slide.templateContent | safe }}
+      </section>
+      {% endfor %}
+    </div>
+  </div>
+
+  <script src="/reveal.js/dist/reveal.js"></script>
+  <script src="/reveal.js/plugin/highlight/highlight.js"></script>
+  <script src="/reveal.js/plugin/notes/notes.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      plugins: [RevealHighlight, RevealNotes],
+    }).then(() => {
+      document.querySelectorAll('.codeblock').forEach(el => el.textContent = el.textContent.trim());
+    });
+  </script>
+</body>
+</html>

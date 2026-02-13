@@ -1,0 +1,16 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve --port=7890",
+    "build": "npx @11ty/eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Workshop Vibe Coding met Claude Code",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "reveal.js": "^5.2.1"
+  }
+}
