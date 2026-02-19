@@ -26,6 +26,16 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
+  // Filter to split slide content on <hr> for vertical reveal.js slides
+  eleventyConfig.addFilter("splitHr", function (content) {
+    return content.split(/<hr\s*\/?>/i).filter(s => s.trim());
+  });
+
+  // Filter to check if content contains <hr>
+  eleventyConfig.addFilter("hasHr", function (content) {
+    return /<hr\s*\/?>/i.test(content);
+  });
+
   // Collection: presentation slides sorted by filename
   eleventyConfig.addCollection("slides", function (collectionApi) {
     return collectionApi

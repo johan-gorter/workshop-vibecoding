@@ -7,7 +7,7 @@
 
 ## Stappen
 
-1. Kies een hosting provider (bv. TransIP, Antagonist, Byte, Versio, Greenhost, Strato, Hetzner)
+1. Kies een hosting provider (bv. TransIP, Strato, Hetzner)
 2. Neem een VPS of managed hosting af
 3. Vraag Claude Code om een deploy-script te maken
 4. Vraag Claude Code om SSL, backups en beveiliging in te richten

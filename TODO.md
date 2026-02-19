@@ -4,8 +4,7 @@
 
 - msx idea
 - browser extension
-
-## Put in source control
+  - Needs framework?
 
 ## Set up hosting
 

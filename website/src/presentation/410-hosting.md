@@ -7,7 +7,7 @@ Op eigen server op kantoor. \
 
 ## Optie 2: 15 jaar geleden
 
-Op server van hosting provider. Hosting provider heeft database, scripting en CMS \
+Op gehuurde virtuele server van hostingprovider. Hosting provider heeft database, scripting en CMS \
 ☹️ Vast bedrag per maand
 
 ## Optie 3: 5 jaar geleden

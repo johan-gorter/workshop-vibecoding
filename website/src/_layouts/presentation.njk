@@ -46,9 +46,19 @@
   <div class="reveal">
     <div class="slides">
       {% for slide in collections.slides %}
+      {% if slide.templateContent | hasHr %}
+      <section>
+        {% for subslide in slide.templateContent | splitHr %}
+        <section>
+          {{ subslide | safe }}
+        </section>
+        {% endfor %}
+      </section>
+      {% else %}
       <section>
         {{ slide.templateContent | safe }}
       </section>
+      {% endif %}
       {% endfor %}
     </div>
   </div>
